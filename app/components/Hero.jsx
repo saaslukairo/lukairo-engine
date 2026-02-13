@@ -1,0 +1,3 @@
+import { useEffect, useRef } from "react";
+
+// Rest of the component code...
