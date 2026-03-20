@@ -1,6 +1,3 @@
-import Hero from "../components/Hero";
-import Services from "../components/Services";
-
 export const meta = () => {
   return [
     { title: "LUKAIRO | Plug-and-Play Growth Engines" },
@@ -10,9 +7,21 @@ export const meta = () => {
 
 export default function Home() {
   return (
-    <main className="lukairo-page">
-      <Hero bookingHref="https://www.lukairoengine.com/widget/booking/SGgO7LS3M1CVcD0ok6xV" />
-      <Services />
-    </main>
+    <>
+      <link rel="stylesheet" href="/css/hero.css" />
+
+      <section className="globe-stage">
+        <canvas id="globe"></canvas>
+
+        <div className="hero-overlay">
+          <h1>We build and run revenue systems.</h1>
+          <p>We connect execution, systems, and growth into a single operating layer.</p>
+          <span>From direct sales floors to elite SaaS and enterprise GTM.</span>
+        </div>
+      </section>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r167/three.min.js"></script>
+      <script src="/js/hero-globe.js"></script>
+    </>
   );
 }
