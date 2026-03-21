@@ -1,7 +1,6 @@
-import { defineConfig } from 'vite'
+import { defineConfig } from "vite";
+import { vitePlugin as remix } from "@remix-run/dev";
 
 export default defineConfig({
-  build: {
-    outDir: 'dist'
-  }
-})
+  plugins: [remix()],
+});
